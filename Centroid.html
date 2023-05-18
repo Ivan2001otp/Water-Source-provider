@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+
+    <link rel="stylesheet"  href="./CentroidStyle.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<header>
+
+    <i class="fa-solid fa-bars" id="menu"></i>
+    <section id="sidenav">
+        <ul>
+           <li><a href="#"><i class="fa-solid fa-reply fa-beat-fade" style="color: #896bc2;"></i><span> </span><u>RESULT</u></a></li>
+            <p id="results"></p>
+        </ul>
+    </section>
+</header>
+
+<body>
+
+
+    <div id='map'></div>
+    
+
+    <form 
+    style="
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(181, 127, 231);
+        max-width:80%;
+        color: white;
+        padding: 10px;
+        border-radius: 6%;
+        z-index: 9999;
+        text-align: center;
+    "
+    >
+        <h3 style="font-size: 22px;
+          
+        "><b>PARAMETERS</b></h3>
+        <div >
+            <div class="lats_divtag" style="
+                display:inline-block;
+                font-size: 20px;
+                font-family: 'Calibri';
+                ">
+                Latitude :
+            </div>
+            <div class="lats_inputTag" id="target_lats" 
+            
+            style="display: inline-block;
+                font-size: 20px;
+                font-family: 'Calibri';
+            ">
+            0.0
+            </div>
+        </div>
+
+        <div>
+            <div class="lats_divtag" 
+            style="display:inline-block;
+                font-size: 20px;
+                font-family: 'Calibri';
+            ">
+                Longitude :
+            </div>
+            <div class="lats_inputTag" id="target_longs"
+             style="display: inline-block;
+                font-size: 20px;
+                font-family: 'Calibri';
+            ">
+            0.0
+            </div>
+        </div>
+
+        <div>
+            <div class="lats_divtag" 
+            style="display:inline-block;
+                font-size: 20px;
+                font-family: 'Calibri';
+            ">
+                Max Radius :
+            </div>
+            <div class="lats_inputTag" id="target_res"
+             style="display: inline-block;
+                font-size: 20px;
+                font-family: 'Calibri';
+            ">
+                Eg: 1500 m..
+            </div>
+        </div>
+        
+    </form>
+
+    <script>
+        var menu = document.getElementById('menu');
+        var sidenav = document.getElementById('sidenav');
+
+        sidenav.style.width = "0px";
+        
+        menu.onclick = function(){
+            if(sidenav.style.width=="0px"){
+                sidenav.style.width="500px";
+            }else{
+                sidenav.style.width = "0px";
+            }
+        }
+        
+    </script>
+
+
+
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <script src="./CentroidScript.js"></script>
+</body>
+</html>

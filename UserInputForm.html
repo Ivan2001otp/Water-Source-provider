@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Input</title>
+
+    <link rel="stylesheet" origin="" href="./style.css">
+</head>
+
+
+<body>
+    
+
+    <div class="hero" >
+
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="./assets/nature_topView.mp4" type="video/mp4">
+        </video>
+
+
+        <div class="content">
+         <h1>
+            Explore & Protect Nature
+         </h1>
+        
+         <button class="clickMe" onclick="launch()">
+            Launch
+        </button>
+        
+    </div>
+
+        <div 
+        class="form-container"
+        >
+        <h2 style="text-align: center;">
+            Resource Form Query
+        </h2>
+    
+        <div class="form-field">
+            <label for="latitude">Latitude : </label>
+            <input type="text" id="latitude" name="latitude" required>
+        </div>
+    
+        <div class="form-field">
+            <label for="longitude">Longitude : </label>
+            <input type="text" id="longitude" name="longitude" required>
+        </div>
+    
+        <div class="form-field">
+            <label for="resource-type">
+                Resource Type : 
+            </label>
+    
+            <select 
+            onchange="onDropDown(this)"
+            id="resource-type" 
+            name="resource-type" required>
+    
+            <option value="">Select radius</option>
+            <option value="500">500 m</option>
+            <option value="1000">1000 m</option>
+            <option value="5000">5000 m</option>    
+            <option value="8000">8000 m</option>
+            <option value="10000">10000 m</option>    
+            <option value="15000">15000 m</option>    
+            <option value="20000">20000 m</option>    
+            <option value="25000">25000 m</option>    
+            <option value="30000">30000 m</option>
+            <option value="35000">35000 m</option>    
+            <option value="40000">40000 m</option>    
+            <option value="45000">450000 m</option>    
+            <option value="50000">50000 m</option>    
+            
+        </select>
+        </div>
+    
+        <div class="form-field">
+            <button type="submit" class="btn" onclick="onEntry()" >Finalize</button>
+           
+            <button type="reset" class="btn"
+            onclick="onReset()"
+            style="
+                margin-top: 10px;
+                background-color: rgb(230, 180, 15);
+            "
+           
+           >Reset</button>
+        </div>
+
+        <div hidden class="form-field">
+            <button type="button" class="realTimBtn" 
+           id="onRealtimeEntry">Current Location</button>
+        </div>
+        </div>
+    </div>
+
+    <script src="./ResourceForm.js"></script>
+    
+</body>
+</html>
