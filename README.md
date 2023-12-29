@@ -17,3 +17,9 @@ The User can track the water sources info in two different ways:-
 - Second Approach , User can directly track the water source information based on his current location coordinates.Here,the user need to choose radius limit.
 
 The fetched response is been displayed in navigation bar which is visible on clicking the toggle "bar" icon.
+
+## Output Screenshots
+![page-1](https://github.com/Ivan2001otp/Water-Source-provider/blob/main/output1.png)
+![page-2](https://github.com/Ivan2001otp/Water-Source-provider/blob/main/output2.png)
+![page-3](https://github.com/Ivan2001otp/Water-Source-provider/blob/main/output3.png)
+![page-4](https://github.com/Ivan2001otp/Water-Source-provider/blob/main/output4.png)
